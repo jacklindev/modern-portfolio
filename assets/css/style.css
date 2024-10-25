@@ -941,6 +941,17 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+.timeline-text.company-period {
+  color: var(--orange-yellow-crayola);
+}
+.timeline-text.company-description li::before {
+  content: "▹";
+  position: relative;
+  color: var(--text-gradient-yellow);
+  font-size: var(--fw-300);
+  line-height: 1.6;
+  z-index: 1;
+}
 
 /**
  * Languages section
