@@ -2278,3 +2278,13 @@ textarea.form-input::-webkit-resizer {
   border-radius: 10px;
   box-shadow: var(--shadow-2);
 }
+
+.external_link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.external_link:hover p {
+  color: blue;
+}
