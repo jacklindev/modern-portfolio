@@ -114,6 +114,10 @@ li {
   list-style: none;
 }
 
+li.disc {
+  list-style: disc;
+}
+
 img,
 ion-icon,
 a,

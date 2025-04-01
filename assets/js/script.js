@@ -284,11 +284,11 @@ function countTo(target, duration) {
   const timer = setInterval(function () {
     current += increment;
     document.getElementById("age").textContent =
-      Math.floor(current) + " years old";
+      Math.floor(current) + " years exp";
 
     if (current >= target) {
       clearInterval(timer);
-      document.getElementById("age").textContent = target + " years old";
+      document.getElementById("age").textContent = target + " years exp";
     }
   }, 50);
 }
@@ -310,7 +310,7 @@ const ageElement = document.getElementById("age");
 ageElement.textContent = "0 years old";
 
 setTimeout(function () {
-  countTo(calculateAge("1988-07-07"), 1000);
+  countTo(calculateAge("2012-01-01"), 1000);
 }, 1000);
 
 // Motto Animation
@@ -333,6 +333,27 @@ function flipmotto() {
 }
 
 const intervalId = setInterval(flipmotto, 100);
+
+// Motto Animation 2
+const text2 = Array.from({ length: 20 }, () =>
+  Array.from({ length: 16 }, () => Math.round(Math.random())).join("")
+);
+text2.push("Sr. Frontend Developer");
+
+const mottoElement2 = document.getElementById("motto2");
+let index2 = 0;
+
+function flipmotto2() {
+  mottoElement2.textContent = text2[index2];
+
+  if (text2[index2] === "Sr. Frontend Developer") {
+    clearInterval(intervalId2);
+  }
+
+  index2 = (index2 + 1) % text2.length;
+}
+
+const intervalId2 = setInterval(flipmotto2, 100);
 
 // Expanding About Text
 function toggleText() {
